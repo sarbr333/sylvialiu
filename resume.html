@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>刘雅秀 · 产品经理简历</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", "Helvetica Neue", sans-serif;
+    color: #1a1a1a;
+    background: #f2f2f4;
+    -webkit-font-smoothing: antialiased;
+  }
+  .page {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 52px 56px 64px;
+    line-height: 1.6;
+  }
+  h1.name {
+    font-size: 26px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+  }
+  .contact {
+    font-size: 11.5px;
+    color: #555;
+    text-align: center;
+    margin-bottom: 6px;
+  }
+  .gap { height: 8px; }
+  h2.section {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 18px 0 8px;
+    padding-bottom: 4px;
+    border-bottom: 1.5px solid #6145ed;
+    letter-spacing: 1px;
+  }
+  .entry {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+    margin: 8px 0 3px;
+  }
+  .entry-name { font-size: 12.5px; font-weight: 700; }
+  .entry-time { font-size: 11px; color: #666; white-space: nowrap; }
+  .entry-plain { display: block; font-size: 12.5px; font-weight: 700; }
+  .lead {
+    font-size: 11.5px;
+    font-weight: 600;
+    color: #333;
+    margin: 6px 0 4px;
+  }
+  .sub {
+    font-size: 12px;
+    font-weight: 700;
+    color: #6145ed;
+    margin: 8px 0 3px;
+  }
+  .bullet {
+    font-size: 11px;
+    color: #333;
+    padding-left: 14px;
+    position: relative;
+    margin: 2px 0;
+  }
+  .bullet::before {
+    content: "•";
+    position: absolute;
+    left: 2px;
+    color: #6145ed;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+<h1 class="name">刘雅秀</h1>
+<div class="contact">电话：13931198068（微信同号） 丨 邮箱：sylvia3337@163.com 丨 2027届</div>
+<div class="bullet">• 产品经理方向：聚焦 AI Agent、RAG、LLM 评测、信贷交易链路与电商支付场景，擅长把模糊技术问题拆成可定义、可协同、可评测的产品机制，并推动落到业务指标。</div>
+<div class="bullet">• 个人优势：能在复杂项目中主动完成问题归因、策略拆解、规则设计、跨团队对齐与评测闭环，不只交付页面或需求文档，更关注机制是否能长期复用。</div>
+<h2 class="section">教育经历</h2>
+<div class="entry"><span class="entry-name">清华大学（硕士） - 电子信息</span><span class="entry-time">2024.09 - 2027.06</span></div>
+<div class="entry"><span class="entry-name">河北大学（本科） - 生物信息</span><span class="entry-time">2020.09 - 2024.06</span></div>
+<div class="bullet">• 荣誉奖项：全国大学生自强之星、校特等奖学金（1%）、挑战杯国家级特等奖、中国日报社英语写作全国一等奖、“互联网+”国家级三等奖、“京津冀-粤港澳”创业大赛国家优胜奖、腾讯“2025 LIGHT创造营”优秀项目、HICOOL 青年创业梦想计划梦想新星奖。</div>
+<h2 class="section">实习经历</h2>
+<div class="entry"><span class="entry-name">腾讯 - 云产品六部 WorkBuddy 技术产品</span><span class="entry-time">2026.04 - 2026.06</span></div>
+<div class="lead">主要工作：围绕 WorkBuddy Agent 的 harness、工具调用、上下文注入与 MCP 插件链路，将“工具越来越多但模型用不好”的问题抽象为上下文治理与能力路由问题，设计平台化机制提升工具路由准确性、上下文可控性、会话稳定性与工程可扩展性。</div>
+<div class="sub">【Agent 工具架构重构】</div>
+<div class="bullet">• 将工具集膨胀带来的 Token 浪费、注意力稀释和误调用问题重新定义为“Agent 如何按任务理解工具能力”的产品问题，拆解出工具理解、候选召回、上下文注入、调用兜底四个关键环节，而不是只做工具列表优化。</div>
+<div class="bullet">• 产出 Deferred 工具延迟加载方案和 ToolSearch 动态路由规则，定义工具描述字段、触发条件、渐进式加载策略和兜底匹配逻辑，把原本静态堆叠的工具上下文改造成可搜索、可治理、可扩展的能力索引。</div>
+<div class="bullet">• 通过这套机制降低无效上下文占用和高频误调风险，让 Agent 在复杂工具环境中具备按需理解、按需调用和可持续扩展的能力，并为后续多工具 harness 编排提供统一产品框架。</div>
+<div class="sub">【MCP 高可用架构】</div>
+<div class="bullet">• 将 MCP 插件接入中的上下文注入混乱、会话内无法动态增删 Server、断连恢复弱等问题，抽象为“插件生命周期管理 + 会话稳定性”的平台能力，明确接入、加载、缓存、恢复、退出各状态的产品边界。</div>
+<div class="bullet">• 设计会话级热加载机制和“快缓存-自恢复-防循环”连接模型，补齐按需过滤、本地缓存、异常隔离、重连兜底等规则，使插件异常不再直接干扰 Agent 主链路。</div>
+<div class="bullet">• 最终推动外部插件从静态硬编码接入升级为动态可管理能力，提升 Agent 上下文可控性、插件可用性和异常场景稳定性。</div>
+<div class="entry"><span class="entry-name">京东科技 - 产品经理｜白条交易</span><span class="entry-time">2026.01 - 2026.04</span></div>
+<div class="lead">主要工作：负责白条交易链路中的信贷产品增长与电商支付场景渗透，从用户理解、权益表达、链路承接和 A/B 评测四个层面推动关闭挽留与购物车-结算-收银台优惠联动，提升交易转化、白条支付渗透与分期收入。</div>
+<div class="sub">【AI 挽留助手】</div>
+<div class="bullet">• 针对免息优先付 3.64% 的关闭率，结合埋点和用户反馈将流失原因从“用户不需要权益”重新归因为“控制感丧失”和“500 元起分门槛误解”，据此把挽留目标从强拦截改为解释权益、诊断顾虑并帮助用户调整设置。</div>
+<div class="bullet">• 设计 E-D-D（共情-诊断-化解）对话模型和 RAG 动态追问链路，沉淀关闭原因识别、知识库召回、工具触发和结果反馈规则，并接入“修改起分金额”等工具能力，使 AI 助手能直接解决用户问题而非只做话术劝返。</div>
+<div class="bullet">• 上线后建立埋点监控与 bad case 评测闭环，用真实失败样本反哺知识库和对话策略迭代，带来日均分期交易额增量 3000w+、日收入增量 90w。</div>
+<div class="sub">【购物车支付优惠联动】</div>
+<div class="bullet">• 发现白条权益在主站购物车阶段表达缺失，用户到收银台才感知优惠，导致信贷支付价值没有进入加购和结算决策；据此将项目目标定义为把白条权益前置到购物车并贯穿结算、收银台全链路。</div>
+<div class="bullet">• 拆解购物车、结算、收银台三个触点的用户决策差异，制定 6 类权益展示策略、品类/客群推荐规则和试金石 A/B 实验方案，并协调科技侧支付准入、molo 智能决策与交易侧结算复用改造，确保权益表达和交易承接一致。</div>
+<div class="bullet">• 上线后日均成交增量约 1 万单，转化率从 3.4% 提升至 3.7%，沉淀出“权益前置-链路承接-实验评测”的电商信贷增长方法，可复用于其他支付权益场景。</div>
+<div class="entry"><span class="entry-name">深圳深度赋智科技有限公司（MetaGPT Agent） - AI 产品实习生</span><span class="entry-time">2025.06 - 2025.09</span></div>
+<div class="lead">主要工作：负责 Deep Research Agent 的评测体系、决策策略与报告生成流程优化，将“答案不稳定”拆解为 Query 生成、搜索决策、信息抽取、答案整合和报告结构多个可定位环节，推动复杂研究任务准确率和报告稳定性提升。</div>
+<div class="sub">【Deep Research 评测与决策优化】</div>
+<div class="bullet">• 面对 Deep Research 准确率和稳定性不足的问题，主动把评测目标从“最终答案对错”前移到“链路损耗定位”，建立能复现、能归因、能指导策略迭代的评测框架。</div>
+<div class="bullet">• 引入 GAIA/xBench 与 LLM-as-a-Judge，设计失败 case 链路溯源方法，将问题拆到 Query 生成、搜索决策、信息抽取和答案整合等环节，定位约 50% 损耗来自 Query 生成，避免团队只在最终答案层面反复调 prompt。</div>
+<div class="bullet">• 基于评测结论提出分层解析模板、置信度动态搜索策略与中间状态模块，把诊断结果转化为可实现的产品策略，将 xBench 准确率由 55% 提升至 60%。</div>
+<div class="sub">【流程、Prompt 与竞品评测】</div>
+<div class="bullet">• 针对报告生成停留在段落级拼接、增量修改不稳定的问题，将生成流程升级为 Section 级结构化链路，定义模块拆分、上下文继承和差异化 Prompt 策略，提升报告的可控性和多轮修改稳定性。</div>
+<div class="bullet">• 定义增量交互指标体系和核心人群研究场景，构建可复用评测案例集，并对 Genspark 等竞品进行 LLM-as-a-Judge 多维评分，为产品差距判断提供量化依据。</div>
+<div class="bullet">• 评测结果明确了我方产品在交互增量、报告结构和任务边界上的短板，为后续模型策略、Prompt 迭代和产品定位提供决策依据。</div>
+<div class="gap"></div>
+<h2 class="section">科研经历</h2>
+<div class="entry"><span class="entry-name">OScaR: The Occam’s Razor for Extreme KV Cache Quantization in LLMs and Beyond（NeurIPS 在投，CCF-A）</span><span class="entry-time">2026.03 - 2026.05</span></div>
+<div class="bullet">• 揭示 TNI 是 KV Cache 量化瓶颈，提出由分流旋转与全 Token 缩放组成的轻量通用量化框架，实现近乎无损的 INT2 缓存压缩。</div>
+<div class="entry"><span class="entry-name">Attention Sink in Transformers（arXiv:2604.10098，Computer Science Review SCI 一区在投）</span><span class="entry-time">2026.01 - 2026.04</span></div>
+<div class="entry"><span class="entry-name">Journal of Chromatography A（JCR 一区）</span><span class="entry-time">2022.03 - 2022.10</span></div>
+<div class="entry"><span class="entry-name">基于 RAG 的医疗问诊助手、人际关系管理系统（vibecoding）、自动化投递简历系统（OpenClaw）</span><span class="entry-time">2024.10 - 至今</span></div>
+<h2 class="section">创业经历</h2>
+<div class="entry"><span class="entry-name">脊柱侧弯康复 AI 评估的技术研究 - CEO</span><span class="entry-time">2024.12 - 2025.12</span></div>
+<div class="bullet">• 将脊柱侧弯居家评估从“用户拍照 + 算法识别”的粗流程拆成「拍摄引导-质量校验-自动评估-结果解读」四个产品模块，降低非专业用户的拍摄门槛，并让评估结果可解释、可交付。</div>
+<div class="bullet">• 围绕居家场景中姿态、距离和拍摄质量不稳定的问题，推进 YOLOv8 自适应脊柱关键点检测，引入 CSPNet 与 PAN-FPN 多尺度特征融合，并融合脊柱曲率切点与肩胛几何特征的双模态评估算法；关键点检测 mAP@0.5:0.95 = 94.4%，单目测距误差控制至 7.2%。</div>
+<div class="bullet">• 获得朝阳区首批数字疗法 50 万元孵化资金、腾讯 LIGHT 创造营优秀项目（最高奖项）、HICOOL 青年创业梦想计划梦想新星奖等。</div>
+<h2 class="section">专业技能</h2>
+<div class="bullet">• 产品/工具：Vibecoding（Cursor、Claude、Codex）、Figma、Axure、Adobe Photoshop、Excel（数据透视表、VLOOKUP）、SQL。</div>
+<div class="bullet">• AI 技术栈：熟悉 RAG 链路、LangChain、Prompt Engineering、OpenClaw、N8N；理解 LLM、VLM、VLA、世界模型及 Agent 工具调用/上下文工程。</div>
+</div>
+</body>
+</html>
